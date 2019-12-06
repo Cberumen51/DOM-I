@@ -37,38 +37,55 @@ const siteContent = {
   },
 };
 
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let ctaTextH1 = document.querySelector('.cta-text h1')
+siteContent.cta.h1 = "DOM <br> Is <br> Awesome"
+ctaTextH1.innerHTML = siteContent['cta']['h1']
+
 let firstNav = document.querySelector("a:nth-of-type(1)")
 console.log(firstNav)
 firstNav.textContent = siteContent.nav["nav-item-1"]
+firstNav.style.color = "green"
 
 let secondNav = document.querySelector("a:nth-of-type(2)")
 console.log(secondNav)
 secondNav.textContent = siteContent.nav["nav-item-2"]
+secondNav.style.color = "green"
 
 let thirdNav = document.querySelector("a:nth-of-type(3)")
 console.log(thirdNav)
 thirdNav.textContent = siteContent.nav["nav-item-3"]
+thirdNav.style.color = "green"
 
 let fourthNav = document.querySelector("a:nth-of-type(4)")
 console.log(fourthNav)
 fourthNav.textContent = siteContent.nav["nav-item-4"]
+fourthNav.style.color = "green"
 
 let fifthNav = document.querySelector("a:nth-of-type(5)")
 console.log(fifthNav)
 fifthNav.textContent = siteContent.nav["nav-item-5"]
+fifthNav.style.color = "green"
 
 let sixthNav = document.querySelector("a:nth-of-type(6)")
 console.log(sixthNav)
 sixthNav.textContent = siteContent.nav["nav-item-6"]
+sixthNav.style.color = "green"
 
-let ctatext = document.querySelector("h1");
-console.log(ctatext);
-ctatext.textContent = "DOM" + "\n"+ "is " + "awesome"
+let nav = document.querySelector('nav')
+let puppyLink = document.createElement('a')
+puppyLink.innerText = "Puppies!"
+nav.prepend(puppyLink)
+puppyLink.style.color = "green"
 
+let kittyLink = document.createElement('a')
+kittyLink.innerText = "Kitties!"
+nav.appendChild(kittyLink)
+kittyLink.style.color = "green"
 
 let buttontext = document.querySelector("button");
 console.log(buttontext);
