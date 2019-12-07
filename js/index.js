@@ -37,6 +37,126 @@ const siteContent = {
   },
 };
 
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaTextH1 = document.querySelector('.cta-text h1')
+siteContent.cta.h1 = "DOM <br> Is <br> Awesome"
+ctaTextH1.innerHTML = siteContent['cta']['h1']
+
+let firstNav = document.querySelector("a:nth-of-type(1)")
+console.log(firstNav)
+firstNav.textContent = siteContent.nav["nav-item-1"]
+firstNav.style.color = "green"
+
+let secondNav = document.querySelector("a:nth-of-type(2)")
+console.log(secondNav)
+secondNav.textContent = siteContent.nav["nav-item-2"]
+secondNav.style.color = "green"
+
+let thirdNav = document.querySelector("a:nth-of-type(3)")
+console.log(thirdNav)
+thirdNav.textContent = siteContent.nav["nav-item-3"]
+thirdNav.style.color = "green"
+
+let fourthNav = document.querySelector("a:nth-of-type(4)")
+console.log(fourthNav)
+fourthNav.textContent = siteContent.nav["nav-item-4"]
+fourthNav.style.color = "green"
+
+let fifthNav = document.querySelector("a:nth-of-type(5)")
+console.log(fifthNav)
+fifthNav.textContent = siteContent.nav["nav-item-5"]
+fifthNav.style.color = "green"
+
+let sixthNav = document.querySelector("a:nth-of-type(6)")
+console.log(sixthNav)
+sixthNav.textContent = siteContent.nav["nav-item-6"]
+sixthNav.style.color = "green"
+
+let nav = document.querySelector('nav')
+let puppyLink = document.createElement('a')
+puppyLink.innerText = "Puppies!"
+nav.prepend(puppyLink)
+puppyLink.style.color = "green"
+
+let kittyLink = document.createElement('a')
+kittyLink.innerText = "Kitties!"
+nav.appendChild(kittyLink)
+kittyLink.style.color = "green"
+
+let buttontext = document.querySelector("button");
+console.log(buttontext);
+buttontext.textContent = siteContent.cta.button
+
+let cta = document.getElementById("cta-img");
+cta.setAttribute('src', siteContent["cta"]["img-src"])
+
+let featuresH4 = document.querySelector(".top-content .text-content:nth-of-type(1) h4");
+console.log(featuresH4);
+featuresH4.textContent = siteContent["main-content"]["features-h4"];
+
+let featuresContent = document.querySelector(".top-content .text-content:nth-of-type(1) p");
+console.log(featuresContent);
+featuresContent.textContent = siteContent["main-content"]["features-content"];
+
+let aboutH4 = document.querySelector('.top-content .text-content:nth-of-type(2) h4');
+console.log(aboutH4);
+aboutH4.textContent = siteContent["main-content"]["about-h4"];
+
+let aboutContent = document.querySelector(".top-content .text-content:nth-of-type(2) p");
+console.log(aboutContent);
+aboutContent.textContent = siteContent["main-content"]["about-content"];
+
+let snippets = document.getElementById("middle-img");
+snippets.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let servicesH4 = document.querySelector(".bottom-content .text-content:nth-of-type(1) h4");
+console.log(servicesH4);
+servicesH4.textContent = siteContent["main-content"]["services-h4"];
+
+let serviesContent = document.querySelector(".bottom-content .text-content:nth-of-type(1) p");
+console.log(serviesContent);
+serviesContent.textContent = siteContent["main-content"]["services-content"];
+
+let productH4 = document.querySelector(".bottom-content .text-content:nth-of-type(2) h4");
+console.log(productH4);
+productH4.textContent = siteContent["main-content"]["product-h4"];
+
+let productContent = document.querySelector(".bottom-content .text-content:nth-of-type(2) p");
+console.log(productContent);
+productContent.textContent = siteContent["main-content"]["product-content"];
+
+let visionH4 = document.querySelector(".bottom-content .text-content:nth-of-type(3) h4");
+console.log(visionH4);
+visionH4.textContent = siteContent["main-content"]["vision-h4"];
+
+let visionContent = document.querySelector(".bottom-content .text-content:nth-of-type(3) p");
+console.log(visionContent);
+visionContent.textContent = siteContent["main-content"]["vision-content"];
+
+let contactH4 = document.querySelector(".contact h4");
+console.log(contactH4)
+contactH4.textContent = siteContent.contact["contact-h4"]
+
+let contactAddress = document.querySelector(".contact p:nth-of-type(1)")
+console.log(contactAddress)
+contactAddress.textContent = siteContent.contact.address
+
+let contactPhoneNumber = document.querySelector(".contact p:nth-of-type(2)")
+console.log(contactPhoneNumber)
+contactPhoneNumber.textContent = siteContent.contact.phone
+
+let contactEmail = document.querySelector(".contact p:nth-of-type(3)")
+console.log(contactEmail)
+contactEmail.textContent = siteContent.contact.email
+
+
+const footer = document.querySelector('footer');
+footer.textContent =  "Copyright Great Idea! 2018"
+
+const secondaryContent = document.querySelector('body');
+secondaryContent.append(footer);
+
